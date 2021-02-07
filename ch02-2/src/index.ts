@@ -1,4 +1,5 @@
-import { Iperson, makePerson } from './person/Person'
+import Iperson from './person/IPerson'
+import Person, { makePerson } from './person/Person'
 
 const testMakePerson = (): void => {
   let jane: Iperson = makePerson('jane')
