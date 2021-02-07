@@ -20,3 +20,6 @@ console.log(person)
 
 //결과
 //[ Person { name: 'Milton Howell', age: 42 }, Person { name: 'Roxie Knight', age: 34 } ]
+
+//chance 가짜 데이터 만들어 주는 것 -> Chance 클래스 하나만 export default 형태로 재공 중괄호 X
+//ramda 함수형 유틸리티 패키지 -> 다양한 기능을 제공하므로 import * as R 형태로 사용
