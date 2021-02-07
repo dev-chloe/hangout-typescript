@@ -4,7 +4,7 @@ import Iperson from './IPerson'
 export default class Person implements Iperson {
   constructor(
     public name: string,
-    public age: number
+    public age: number = makeRAndomNumber()
   ) { }
 }
 

@@ -3,7 +3,7 @@ import Person, { makePerson } from './person/Person'
 
 const testMakePerson = (): void => {
   let jane: Iperson = makePerson('jane')
-  let jack: Iperson = makePerson('jack')
+  let jack: Iperson = new Person('jack')
   console.log(jane, jack)
 }
 
