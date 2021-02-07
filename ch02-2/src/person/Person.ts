@@ -1,6 +1,6 @@
-let MAX_AGE = 100
+import * as U from '../utils/makeRandomNumber'
 
-export interface Iperson {
+export default interface Iperson {
   name: string,
   age: number
 }
@@ -12,8 +12,7 @@ class Person implements Iperson {
   ) { }
 }
 
-function makeRAndomNumber(max: number = MAX_AGE): number {
-  return Math.ceil((Math.random() * max))
-}
+export const makePerson = (name: string, age: number = U.makeRAndomNumber()): Iperson => ({ name, age })
 
-export const makePerson = (name: string, age: number = makeRAndomNumber()) => ({ name, age })
+
+// import * as 심벌 from '파일 상대 경로'
