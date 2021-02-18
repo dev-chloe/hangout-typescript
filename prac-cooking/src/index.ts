@@ -1,34 +1,46 @@
 import Ingredient, { CuttableIngredient } from './Ingredient'
 
-// 재료 선택한다
-// 양파, 당근, 감자, 물, 카레가루, 돼지고기
+// Step.1 재료 선택한다
+const ingredients: Array<Ingredient> = new Array<Ingredient>();
+
+// 자를수 있는 재료 - 양파, 당근, 감자, 돼지고기
 const unCuttedOnion: Ingredient = new CuttableIngredient('양파', 1);
 const unCuttedCarrot: Ingredient = new CuttableIngredient('당근', 2);
 const unCuttedPotato: Ingredient = new CuttableIngredient('감자', 1.5);
 const unCuttedPork: Ingredient = new CuttableIngredient('제주흑돼지 앞다리살', 1200);
 
-unCuttedOnion.info();
-unCuttedCarrot.info();
-unCuttedPotato.info();
-unCuttedPork.info();
+// 재료를 담는다
+ingredients.push(unCuttedOnion);
+ingredients.push(unCuttedCarrot);
+ingredients.push(unCuttedPotato);
+ingredients.push(unCuttedPork);
+
+// TODO | 자를수 없는 재료 - 카레가루, 물
+
+// TODO | 재료를 담는다
 
 // [[ FIXME!! ]] readonly로 값 변조를 막기!
 unCuttedCarrot.name = '썩은 당근 ㅋㅋㅋ';
 unCuttedCarrot.info();
 
+// Step.1 결과물
 // 잘리는 재료(need to cut with knife) - 양파, 당근, 감자, 돼지고기
 // 안 잘리는 재료(not need to cut with knife) - 물, 카레가루
-
-// 다듬는다
-  // 칼로 다듬는다
-  // 다듬은 재료 냄비에 담는다
-// const cuttedIgredient = knife.cut(ingredient);
-// pod.add(cuttedIgredient);
+for (let i of ingredients) i.info();
+// for (let i = 0; i < ingredients.length; i++) ingredients[i].info();
+// for (let i in ingredients) ingredients[i].info();
 
 
-// 조리한다
-  // 인덕션에서 국자로 저어가며 냄비를 끓인다
+// TODO | Step.2 다듬는다
+// TODO | 칼로 다듬는다
+// TODO | 다듬은 재료 냄비에 담는다
+// TODO | const cuttedIgredient = knife.cut(ingredient);
+// TODO | pod.add(cuttedIgredient);
 
 
+// TODO | Step.3 조리한다
+// TODO | 인덕션에 냄비를 올리고 가열한다
+// TODO | 국자로 저어가며 냄비를 끓인다
+// TODO | const appleJam: Jam = pod.add(apple).heat();
 
-// const appleJam: Jam = pod.add(apple).heat();
+// TODO | 완성!
