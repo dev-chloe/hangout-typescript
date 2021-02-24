@@ -19,9 +19,10 @@ ingredients.push(unCuttedPork);
 
 // TODO | 재료를 담는다
 
-// [[ FIXME!! ]] readonly로 값 변조를 막기!
-unCuttedCarrot.name = '썩은 당근 ㅋㅋㅋ';
-unCuttedCarrot.info();
+// interface에 readonly로 설정해놔야 당근이 썩지 않아요
+// 컴파일 에러 발생
+// unCuttedCarrot.name = '썩은 당근 ㅋㅋㅋ'; 
+
 
 // Step.1 결과물
 // 잘리는 재료(need to cut with knife) - 양파, 당근, 감자, 돼지고기

@@ -1,19 +1,24 @@
 interface Ingredient {
-  name: string,
-  volume: number
+  readonly name: string,
+  readonly volume: number
 
   info(): void;
 }
 
 class CuttableIngredient implements Ingredient {
+
+  // readonly name: string;
+  // readonly volume: number;
   // 다듬어진 상태
   private isCutted: boolean;
 
   constructor(
-    public readonly name: string,
-    public readonly volume: number
+    public name: string,
+    public volume: number
   ) {
     // 입력받은 이름과 양으로 재료를 생성한다
+    // this.name = name;
+    // this.volume = volume;
     // 생성된 재료는 다듬어 지지 않은 상태이다
     this.isCutted = false;
   }
