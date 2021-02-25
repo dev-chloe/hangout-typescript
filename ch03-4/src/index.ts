@@ -27,3 +27,11 @@ let merged = { ...part1, ...part2, ...part3 }
 
 //{ name: 'Jenny', age: 22, city: 'Seoul', country: 'Kr' }
 console.log(merged)
+
+let person: object = { name: 'nana', age: 40 }
+// console.log(person.name) //에러 
+
+// nana
+console.log(
+  (<{ name: string }>person).name
+)
